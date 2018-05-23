@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">My Application</string>
+
+    <!--<string name="app_name">My Application</string>-->
+
+    <string name="app_name">eCeipt</string>
+    <string name="main_GAccountLogin">Sign In with Google</string>
+    <string name="main_login">Sign In</string>
+    <string name="main_hint_uid">Email</string>
+    <string name="main_hint_pwd">Password</string>
+    <string name="main_Register">Create An Account</string>
+    <string name="main_fgtPass"> <u>Forgot Password?</u></string>
+    <string name="reg_welcome_str">We just need some information from you&#8230;</string>
+    <string name="reg_Title"><u>Sign Up</u></string>
+    <string name="reg_Email">Enter your Email:</string>
+    <string name="reg_ConfEmail">Confirm Your Email:</string>
+    <string name="reg_pass">Enter a Password:</string>
+    <string name="reg_signUp">Sign Up</string>
+    <string name="reg_verify">Verify Email</string>
+
 </resources>
