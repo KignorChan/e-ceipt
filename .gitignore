@@ -4,10 +4,13 @@
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
+/.idea/caches/build_file_checksums.ser
 .DS_Store
 /build
 /captures
 .externalNativeBuild
+oldPHP
 PHP/conn.php
 app/google-services.json
 .git.zip
+oldPHP

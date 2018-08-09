@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.d8.myapplication">
 
-    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/receiptsnap_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!-- Mobile vision dependencies -->
         <meta-data
@@ -22,37 +37,46 @@
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="ocr" />
-        <!--<meta-data
-            android:name="com.google.android.gms.vision.DEPENDENCIES"
-            android:value="barcode" /> -->
 
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".HomeActivity" >
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".WelcomeActivity" />
-        <activity android:name=".ReceiptDetailActivity" />
-        <activity android:name=".PassActivity" />
-        <activity android:name=".AddReceiptOptionActivity" />
-        <activity android:name=".AddReceiptFormActivity">
-
         </activity>
-<!--<<<<<<< HEAD-->
-<!--=======-->
-        <!--<activity android:name=".HomeActivity"></activity>-->
-        <!--<activity android:name=".RegisterActivity" />-->
-        <!--<activity android:name=".WelcomeActivity" />-->
-        <!--<activity android:name=".ReceiptDetailActivity"></activity>-->
-        <!--<activity android:name=".PassActivity"></activity>-->
-        <activity android:name=".OCRActivity" />
-<!--&gt;>>>>>> 27b86939b0ce596a35bde3aeb26765fa8ab23cfd-->
+        <activity android:name=".HomeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".WelcomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ReceiptDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".PassActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AddReceiptOptionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AddReceiptFormActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".OCRActivity" android:screenOrientation="portrait" />
+        <activity android:name=".BarcodeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".OCRTextActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ReceiptShareActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity android:name=".AddReceiptByQR" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="www.eceipt.ca"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ModifyReceiptActivity" />
+        <activity android:name=".AnalyzeActivity"></activity>
     </application>
 
 </manifest>

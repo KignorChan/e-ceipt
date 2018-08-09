@@ -1,17 +1,23 @@
 package com.example.d8.myapplication;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Receipt {
+public class Receipt implements Serializable {
     private String receipId;
     private String name;
     private String date;
     private double totalCost;
     private double tax;
     private String businessName;
+    private String userId;
+    private String category;
     private ArrayList<Item> items = new ArrayList<Item>();
 
     //getter
+    public Item getItembyId(int id){
+        return items.get(id);
+    }
     public String getReceipId() {
         return receipId;
     }
@@ -40,6 +46,13 @@ public class Receipt {
         return items;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
 
     //setter
     public void setReceipId(String receipId) {
@@ -70,19 +83,34 @@ public class Receipt {
         this.items = items;
     }
 
-    public void addItem(String itemName, String itemDesc, double itemPrice){
-        Item item = new Item(itemName, itemDesc, itemPrice);
+    public void addItem(String itemName, String itemDesc, double itemPrice, String itemID){
+        Item item = new Item(itemName, itemDesc, itemPrice, itemID);
         items.add(item);
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
 
 
-    public class Item{
+
+//<<<<<<< HEAD
+//    public class Item{
+//=======
+    public class Item implements  Serializable{
         public String itemName;
         public String itemDesc;
         public double itemPrice;
+        public String itemID;
 
-        public Item(String itemName, String itemDesc, double itemPrice) {
+
+        public Item(String itemName, String itemDesc, double itemPrice, String itemID) {
+            this.itemID = itemID;
             this.itemName = itemName;
             this.itemDesc = itemDesc;
             this.itemPrice = itemPrice;
@@ -116,6 +144,14 @@ public class Receipt {
 
         public void setItemPrice(double itemPrice) {
             this.itemPrice = itemPrice;
+        }
+
+        public String getItemID() {
+            return itemID;
+        }
+
+        public void setItemID(String itemID) {
+            this.itemID = itemID;
         }
     }
 

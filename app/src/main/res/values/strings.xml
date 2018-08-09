@@ -19,6 +19,15 @@
     <string name="reg_verify">Create Your Account</string>
     <string name="pass_email">Send Reset Link</string>
     <string name="pass_title">Reset Password</string>
+
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
     <!-- Google Vision OCR strings -->
     <string name="ok">OK</string>
     <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
@@ -33,5 +42,91 @@
     <string name="ocr_failure">No text captured</string>
     <string name="ocr_error">"Error reading text: %1$s"</string>
     <string name="reg_verifySuper">You must verify your email to continue!</string>
+
+
+    <!-- Add receipt option layout -->
+    <string name="add_receipt_option_add_form">Add receipt form</string>
+    <string name="add_receipt_option_scan_qr">Add receipt by QR code</string>
+    <string name="add_receipt_option_scan_real_receipt">Scan real receipt</string>
+
+    <!-- Add receipt form layout -->
+    <string name="company_name">Company:</string>
+    <string name="receipt_date">Date:</string>
+    <string name="receipt_category">Category:</string>
+    <string name="item_list_label">Item list</string>
+    <string name="item_name_label">Item name</string>
+    <string name="item_cost_label">Item cost ($)</string>
+    <string name="total_cost_label">Total cost($):</string>
+
+    <string name="add_item_btn">Add</string>
+    <string name="total_cost_input_hint">0.00</string>
+    <string name="item_price_input_hint">Item price</string>
+    <string name="item_name_input_hint">Item name</string>
+    <string name="receipt_date_input_hint">Enter receipt creation date</string>
+    <string name="business_name_input_hint">Please enter receipt\'s business name</string>
+
+
+    <!-- home layout -->
+    <string name="company_name_label_in_listview">Company</string>
+
+
+    <string name="receipt_cost_label_in_listview">Cost($)</string>
+    <string name="date_label_in_listview">Date</string>
+    <string name="analyze_btn">Analyze</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="AppLevel">1.0 - Initial</string>
+    <string name="about_lastCheck">Last Release:</string>
+    <string name="about_lastCheckDate">Aug 1st 2018</string>
+    <string name="about_aboutTitle">About Us</string>
+    <string name="about_TitleDesc">Just some information about your App</string>
+    <string name="bg_Title">Select Background Colour</string>
+    <string name="bg_colourDesc">Pick Any Colour You Like!</string>
+
+
+    <!-- null value -->
+    <string name="string_null">null</string>
+    <string name="num_null">0.00</string>
+
+    <string name="profile_name">Display Name</string>
+    <string name="profile_userName">Username </string>
+    <string name="profile_Unlc">Edit Your Information</string>
+    <string name="profile_unkCancel">Cancel</string>
+    <string name="profile_conf">Confirm Changes</string>
+    <string name="main_phoneLogin">Sign In with Phone</string>
+    <string name="ocr_backItemtxt">Previous Item</string>
+    <string name="ocr_fwdItemtxt">Next Item</string>
+    <string name="ocr_itmName">Item Name</string>
+    <string name="ocr_itmPrice">Item Price</string>
+    <string name="ocr_Instruc">Tips for good Scanning</string>
+    <string name="ocr_RcpResultTitle">Receipt Scanning</string>
+    <string name="ocr_instrucTips">1.Make sure the photo displays text clearly!\n2.For best results, only  capture the item text!\n    - Ignore Ads or Promotions(see Picture)\n3.Keep your phone in Portrait Mode\n</string>
+    <string name="ocr_TakePhoto">Scan Receipt</string>
+    <string name="ocr_complete">Finish</string>
+    <string name="ocr_deleteItem">Delete Item</string>
+    <string name="ocr_scanInst">Press Scan Receipt To Get Started</string>
+    <string name="ocr_tip1">Take a Clear Photo with lots of light</string>
+    <string name="ocr_tip2">Photo only the items and costs for best results. Hide any unneeded text. </string>
+    <string name="ocr_tip3">Receipt Scanning has <b>limited accuracy</b>. You can correct your results/add missing information as needed.</string>
+    <string name="main_hint_code">Security Code</string>
+    <string name="main_hint_phone">Phone: (Area Code)(Phone Num)</string>
+    <string name="main_phoneAlt">Standard SMS Rates may apply!</string>
+    <string name="main_phone_b1">(Re)Send SMS Code</string>
+    <string name="main_phone_b2">Confirm Code</string>
+
+
+    <string name="update_item_btn">Update item</string>
+    <string name="ocr_cancel">Cancel</string>
+    <string name="addrecp_btn">Add Receipt</string>
+
+    <string-array name="analyzeDays">
+        <item>This week</item>
+        <item>This month</item>
+        <item>This year</item>
+        <item>Last 7 days</item>
+        <item>Last 30 days</item>
+        <item>All time</item>
+    </string-array>
 
 </resources>
